@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1466877920 source:c:\utn\laboratorio y programacion\proyecto\batalla naval\naval battle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+
+1481577021 source:c:\utn\proyectos\batalla naval\naval battle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+
