@@ -335,8 +335,9 @@ int crear_Barcos(char Table[][DIM])
     int S = 3;  // Small boats (2x1)
     int M = 2;  // Medium boats (3x1)
     int L = 1;  // Large boats (4x1)
+    int XL = 1; // Extra Large boats (5x1)
     int EspaciosTomados = 0;
-    EspaciosTomados = (S * 2) + (M * 3) + (L * 4);
+    EspaciosTomados = (S * 2) + (M * 3) + (L * 4) + (XL * 5);
 
 
     ///BUCLE QUE COLOCA LOS BARCOS.
@@ -347,7 +348,9 @@ int crear_Barcos(char Table[][DIM])
         POS_Inicial.Y = (rand()%(DIM-2))+1;
         direccion = (rand()%2)+1;
         ///Los barcos se colocan en orden del mas grande al mas chico.
-        if(L > 0){
+        if(XL > 0){
+               verificar_espacio(direccion, 5, POS_Inicial, &XL, Table);
+        }else if(L > 0){
                verificar_espacio(direccion, 4, POS_Inicial, &L, Table);
         }else{
             if(M > 0){
